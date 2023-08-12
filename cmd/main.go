@@ -12,7 +12,11 @@ func main() {
 
 	r := mux.NewRouter()
 
-	r.HandleFunc("/api/products/", GetProductsHandler).Methods("GET")
+	r.HandleFunc("/api/products", GetProductsHandler).Methods("GET")
+	r.HandleFunc("/api/products/{id}", GetProductByIdHandler).Methods("GET")
+	r.HandleFunc("/api/products", PostProductsHandler).Methods("POST")
+	r.HandleFunc("/api/products/{id}", PutProductsHandler).Methods("PUT")
+	r.HandleFunc("/api/products/{id}", DeleteProductsHandler).Methods("DELETE")
 
 	server := &http.Server{
 		Addr:    ":8080",
