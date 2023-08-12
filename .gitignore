@@ -1,0 +1,34 @@
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# Compiled Go files
+*.exe
+*.test
+*.prof
+
+# Ignore the binary output directory (change this if your output directory is different)
+/bin/
+
+# Ignore any local configuration files
+/config.local.*
+
+# macOS specific files
+.DS_Store
+
+# Go-specific ignore patterns
+
+# Compiled Go binaries and executables
+*.exe
+*.out
+
+# Compiled Go object files
+*.o
+
+# Generated files by go generate
+*_gen.go
+
+# Ignore Go module cache
+/vendor/
+/go.sum
